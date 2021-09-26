@@ -1,0 +1,82 @@
+@import 'variables';
+.header{
+    padding: 0.75rem 1.875rem;
+    box-shadow: 0px 1px 10px #ece4e4;
+    position: sticky;
+
+    &__nav__logo{
+        cursor: pointer;
+        h3{
+            font-family: $stardosstencil;
+            font-weight:700;
+            color: $orange;
+        }
+    }
+
+    &__nav__links{
+        
+        font-family: $lato;
+        font-size: 300;
+    .link{
+       
+    }
+        &-link:not(:last-child){
+             margin-right: 1.875rem;
+             color: black; 
+             border: 1px solid transparent;
+             padding: 2 0px;    
+             
+             &:hover{
+                 border-bottom: 1px solid $orange;
+             }
+        }
+
+        &-link{
+          
+        }
+
+    }
+
+    &__nav__links-link:last-child{
+        margin-right: 0;
+    }
+
+    &__hamburger{
+        span{
+            display: block;
+            height:0.125rem;
+            width: 0.9375rem;
+            background-color: black;
+            transform-origin:0.05px 1px ;
+            transition: 100ms ease-in-out;
+        }
+
+        span:not(:last-child){
+            margin-bottom: 0.1875rem;
+            
+        }
+    
+    }
+
+    &__options{
+        display: none;
+        
+       &-link{
+           margin-bottom: 0.5rem;
+           color: black;
+            
+       }
+
+       &-link:first-child{
+           margin-top: 0.5rem;
+       }
+    }
+
+    .cover{
+        position: absolute;
+  
+    }
+
+   
+
+}

@@ -1,0 +1,98 @@
+.footer{
+    padding: 1.5rem;
+
+    &__items{
+        
+        &__social{
+            padding: 0.75rem;
+
+            &__items{
+                display: flex;
+                justify-content: space-evenly;
+                list-style: none;
+                margin-bottom: 18px;
+                 color: grey;
+            }
+
+            &__lists{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items:center ;
+                list-style: none;
+
+                .list{
+                     margin-bottom: 18px;
+                     font-family: $openSans;
+                    font-weight:700;
+                    color: grey;
+                }
+
+                .footer-final{
+                    text-align: center;
+                }
+            }
+             
+        }
+
+        .footer-head{
+            text-align: center;
+            font-family: $stardosstencil;
+            font-weight:700;
+            color: $orange;
+            margin-bottom: 18px;
+        }
+
+    }
+
+    &-final{
+                    text-align: center;
+                    font-size: 12px;
+                    font-family: $openSans;
+                    color: $orange;
+                }
+    
+    &-socials{
+        padding: 0 2.5rem;
+        display: flex;
+        margin-bottom: 28px;
+
+        h4{
+            color: black;
+        }
+
+        &-services{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly; 
+        color: rgba(128, 128, 128, 0.596);
+        font-family: $openSans;
+        cursor: pointer;
+        
+
+        li{
+        border: transparent 1px solid;
+            &:hover{
+                border-bottom: 1px solid $orange;
+            }
+        }
+        }
+
+        &-items{
+            list-style: none;
+
+            h4{
+                font-family: $openSans;
+                margin-top: 7px;
+            }
+
+            .item{
+                color: rgba(179, 113, 28, 0.596);
+
+               
+            }
+
+            
+        }
+    }
+}

@@ -1,0 +1,179 @@
+@import 'mixins';
+@import'variables';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flexbox{
+
+display: flex;
+    &.jc-c{
+    justify-content: center;
+    }
+    &.ai-c{
+        align-items: center;
+    }
+    &.jc-sb{
+        justify-content: space-between;
+    }
+
+    &.jc-se{
+        justify-content: space-evenly;
+    }
+
+}
+
+.links{
+    text-decoration: none;
+}
+
+.hide-for-mobile{
+    @include breakpoint-down(medium){
+    display: none !important;
+}
+}
+
+.hide-for-desktop{
+    @include breakpoint-up(large){
+        display: none !important;
+    }
+}
+
+.close{
+     > span:first-child{
+            transform: rotate(45deg);
+            
+        }
+
+        > span:nth-child(2){
+            opacity: 0;
+        }
+
+        > span:last-child{
+            transform:rotate(-45deg);
+            
+        }
+}
+
+.open-menu{
+     position: absolute;
+       top: 5rem;
+       width: 250px;
+       border-radius: 5px;
+       display: flex !important;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       background: $offwhite;
+       left: 50%;
+        z-index: 11;
+       transform: translate(-50%);
+       font-family: $openSans;
+}
+
+.overlay{
+     left: 0;
+        top: 50px;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(255, 98, 0, 0.4), $offwhite);
+        height: 100vh;
+        width: 100%;
+        z-index: 10;
+}
+
+ .hidden{
+        overflow-y: hidden;
+    }
+
+  .button{
+      color: $offwhite;
+      background-color: $orange;
+      font-family: $openSans;
+       padding: 7px 7px;
+       border-radius: 4px;
+       border: none;
+  }
+
+  .last{
+      height: 70px;
+      border-radius: 200px !important;
+      width: 70px !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15%;
+      color: $orange;
+  }
+
+  .hero-for-desktop{
+      @include breakpoint-up(large){
+        display: flex;
+        justify-content: space-evenly;
+
+         .hero__about-us__icons__info{
+        width: 300px;
+    }
+      }
+  }
+
+  .cards-for-desktop{
+      @include breakpoint-up(large){
+          max-width: 270px;
+          height: auto;
+          margin-right: 40px !important;
+        
+      }
+  }
+
+  .overflow-hidden-dt{
+         @include breakpoint-up(large){
+          overflow-x: hidden !important;   
+      }
+  }
+
+  .socials-for-desktop{
+     @include breakpoint-up(large){
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      .item{
+          display: inline;
+      }
+      }
+  }
+
+  .footer-final{
+                    text-align: center;
+                    font-size: 12px;
+                    font-family: $openSans;
+                    color: $orange;
+                }
+
+ .ta-c{
+     text-align: center;
+ }
+
+ .pack{
+     top: 90px !important;
+     width:600px !important;
+ }
+
+ .cards-for-mobile{
+          grid-template-columns: repeat(autofit, minmax(130px, 1fr) !important);
+}
+
+.btn{
+                         color: $offwhite;
+                         padding: 0.8rem;
+                         font-size: 10px;
+                         text-transform: uppercase;
+                         border-radius: 4px;
+                         display: block;
+                         width: 100%;
+                         cursor: pointer;
+                         border: 1px solid rgba(255, 255, 255, 0.2);;
+                         background-color: transparent;
+                     }

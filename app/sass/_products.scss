@@ -1,0 +1,47 @@
+.product__page{
+    padding:  0rem 1.835rem;
+
+    &__category{
+        
+        .category{
+           display: flex;
+           justify-content: space-between;
+           font-family: $lato;
+           margin: 15px 0;
+        }
+    }
+
+    &__product{
+        white-space: nowrap;
+    
+        overflow: auto;
+        &__cards{
+            display: inline-block;
+            background-color: white;
+            border-radius: 0.25rem;
+           
+            overflow: hidden;
+            margin-right: 20px;
+            height: 100%;
+            width: 250px;
+
+            .cards__image{
+                img{
+                    height: auto;
+                    max-width: 100%;
+                    vertical-align: middle;
+                }
+            }
+            .cards__Info{
+                    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+                    padding: 1rem;
+
+                    h3{
+                        margin-bottom: 6px;
+                        color: $offwhite;
+                    }
+            }
+        }
+      
+    }
+}
