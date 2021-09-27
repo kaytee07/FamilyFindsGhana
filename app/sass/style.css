@@ -35,6 +35,12 @@
           justify-content: space-evenly;
 }
 
+.flexbox.jc-fs {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .links {
   text-decoration: none;
 }
@@ -466,6 +472,11 @@
   margin-bottom: 28px;
 }
 
+.hero__about-us__icons__info .button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 98, 3, 0.8);
+}
+
 .hero__find-events {
   background-color: #ecf9ff;
 }
@@ -504,7 +515,7 @@
           align-items: center;
   justify-items: center;
   padding: 1.5rem;
-  max-width: 800px;
+  max-width: 1022px;
   margin: 0 auto;
 }
 
