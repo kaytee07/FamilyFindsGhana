@@ -1,0 +1,48 @@
+.describtion__modal{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+
+    .describtion__modal__card{
+        background-color: white;
+                    border-radius: 0.25rem;
+                    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+                    display: flex;
+                    flex-direction: column;
+                    overflow:hidden;
+                    -webkit-mask-repeat-x:350px;
+                    max-width: 400px;
+                    min-width: 300px;
+                    height: 550px;  
+                    margin-right: 0.75rem;
+                    transition: transform 1s all;
+
+                    &__header{
+                        color: ivory;
+                        &-img{
+                            display: flex;
+                            justify-content: center;
+                            img{
+                                    height: auto;
+                                    max-width: 100%;   
+                                    vertical-align: middle; 
+                            }
+
+                            .name{
+                                position: absolute;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: rgb(226, 219, 219);
+                                top: 5%;
+                                height: 150px;
+                                width: 70%;
+                                background-color: rgba(17, 17, 17, 0.4);
+                                border-radius: 5px;
+                                font-size: 30px;
+                            }
+                        }
+                    }
+    }
+}

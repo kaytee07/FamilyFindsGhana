@@ -504,12 +504,6 @@
 }
 
 .hero__find-events__cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -526,8 +520,6 @@
           align-items: center;
   justify-items: center;
   padding: 1.5rem;
-  max-width: 1022px;
-  margin: 0 auto;
 }
 
 .hero__find-events__cards .cards .card {
@@ -781,5 +773,76 @@
 .product__page__product__cards .cards__Info h3 {
   margin-bottom: 6px;
   color: #FFFAFF;
+}
+
+.describtion__modal {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.describtion__modal .describtion__modal__card {
+  background-color: white;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  -webkit-mask-repeat-x: 350px;
+  max-width: 400px;
+  min-width: 300px;
+  height: 550px;
+  margin-right: 0.75rem;
+  -webkit-transition: -webkit-transform 1s all;
+  transition: -webkit-transform 1s all;
+  transition: transform 1s all;
+  transition: transform 1s all, -webkit-transform 1s all;
+}
+
+.describtion__modal .describtion__modal__card__header {
+  color: ivory;
+}
+
+.describtion__modal .describtion__modal__card__header-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.describtion__modal .describtion__modal__card__header-img img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.describtion__modal .describtion__modal__card__header-img .name {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #e2dbdb;
+  top: 5%;
+  height: 150px;
+  width: 70%;
+  background-color: rgba(17, 17, 17, 0.4);
+  border-radius: 5px;
+  font-size: 30px;
 }
 /*# sourceMappingURL=style.css.map */
