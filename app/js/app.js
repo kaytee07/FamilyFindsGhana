@@ -7,6 +7,7 @@ const $location = document.querySelector(".locations");
 const $more = document.querySelector(".more");
 const $explore = document.querySelector(".explore");
 const $tour = document.querySelector(".tour");
+const $explore = document.querySelector(".explore")
 
 
 $hamburger.addEventListener('click',()=>{
