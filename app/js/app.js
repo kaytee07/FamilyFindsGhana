@@ -3,11 +3,11 @@ const $cover = document.querySelector(".cover");
 const $headerOptions = document.querySelector(".header__options");
 const $body = document.querySelector("body");
 const $logo = document.querySelector(".header__nav__logo")
-const $location = document.querySelector(".locations");
+const $location = document.querySelector(".location");
 const $more = document.querySelector(".more");
-const $explore = document.querySelector(".explore");
-const $tour = document.querySelector(".tour");
-const $explore = document.querySelector(".explore")
+const $explore = document.querySelector(".explorer");
+const $tour = document.querySelector(".tours");
+
 
 
 $hamburger.addEventListener('click',()=>{
@@ -39,12 +39,14 @@ $more.addEventListener("click", () => {
   this.location.href = "locations.html";
 });
 
+ 
+
 $explore.addEventListener("click", () => {
-  this.location.href = "locations.html";
+ this.location.href = "locations.html";
 });
 
 $tour.addEventListener("click", () => {
   this.location.href = "locations.html";
 });
 
-console.log($tour)
+

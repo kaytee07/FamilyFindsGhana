@@ -193,6 +193,7 @@
 
 .ta-c {
   text-align: center;
+  color: inherit;
 }
 
 .pack {
@@ -380,13 +381,17 @@
   padding: 0;
 }
 
-.hero__home-img-overlay .explore {
+.hero__home-img-overlay .explorer {
   margin-top: 35px;
+}
+
+.hero__home-img-overlay .explorer:hover {
+  cursor: pointer;
+  background-color: rgba(255, 98, 3, 0.8);
 }
 
 .hero__home-img.hide-for-mobile {
   background: url(/img/desktop-land-img.jpg);
-  display: block;
   position: relative;
   width: 100%;
   height: 470px;
@@ -416,7 +421,7 @@
   padding: 0;
 }
 
-.hero__home-img.hide-for-mobile-overlay .explore {
+.hero__home-img.hide-for-mobile-overlay .explorer {
   margin-top: 35px;
 }
 
@@ -499,6 +504,12 @@
 }
 
 .hero__find-events__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding: 0;
 }
