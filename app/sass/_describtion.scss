@@ -1,9 +1,13 @@
 .describtion__modal{
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
+    z-index: 12;
+
+   
+    
 
     .describtion__modal__card{
 
