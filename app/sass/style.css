@@ -219,6 +219,10 @@
   background-color: transparent;
 }
 
+.show {
+  display: block !important;
+}
+
 .header {
   padding: 0.75rem 1.875rem;
   -webkit-box-shadow: 0px 1px 10px #ece4e4;
@@ -777,10 +781,11 @@
 
 .describtion__modal {
   position: absolute;
-  top: 10%;
+  top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
 }
 
 .describtion__modal .describtion__modal__card {
@@ -807,6 +812,19 @@
   transition: transform 1s all, -webkit-transform 1s all;
 }
 
+.describtion__modal .describtion__modal__card .close-icon {
+  position: absolute;
+  top: 2%;
+  left: 85%;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.describtion__modal .describtion__modal__card .close-icon .fad {
+  color: #FF6201;
+}
+
 .describtion__modal .describtion__modal__card__header {
   color: ivory;
 }
@@ -826,23 +844,20 @@
   vertical-align: middle;
 }
 
-.describtion__modal .describtion__modal__card__header-img .name {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #e2dbdb;
-  top: 5%;
-  height: 150px;
-  width: 70%;
-  background-color: rgba(17, 17, 17, 0.4);
-  border-radius: 5px;
-  font-size: 30px;
+.describtion__modal .describtion__modal__card__headers-other-details {
+  height: auto;
+  padding: 7px 10px;
+  color: black;
+}
+
+.describtion__modal .describtion__modal__card__headers-other-details h4 {
+  margin-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+  color: #FF6201;
+}
+
+.describtion__modal .describtion__modal__card__headers-other-details p {
+  margin-bottom: 10px;
+  font-family: sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,10 +1,24 @@
 .describtion__modal{
     position: absolute;
-    top: 10%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
+    display: none;
 
     .describtion__modal__card{
+
+        .close-icon{
+            position: absolute;
+            top: 2%;
+            left: 85%;
+            padding: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+
+            .fad{
+                color: $orange;
+            }
+        }
         background-color: white;
                     border-radius: 0.25rem;
                     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
@@ -29,20 +43,24 @@
                                     vertical-align: middle; 
                             }
 
-                            .name{
-                                position: absolute;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: rgb(226, 219, 219);
-                                top: 5%;
-                                height: 150px;
-                                width: 70%;
-                                background-color: rgba(17, 17, 17, 0.4);
-                                border-radius: 5px;
-                                font-size: 30px;
-                            }
+                           
                         }
                     }
+           &__headers-other-details{
+               height: auto;
+               padding: 7px 10px;
+               color: black;
+
+               h4{
+                   margin-bottom: 10px;
+                   font-family: $openSans;
+                   color: $orange;
+               }
+
+               p{
+                    margin-bottom: 10px;
+                     font-family: sans-serif;
+               }
+           }
     }
 }

@@ -7,6 +7,10 @@ const $location = document.querySelector(".location");
 const $more = document.querySelector(".more");
 const $explore = document.querySelector(".explorer");
 const $tour = document.querySelector(".tours");
+const $closeicon = document.querySelector(".close-icon");
+const $cardBtn = document.querySelectorAll(".card-btn");
+const $describtionModal = document.querySelector(".describtion__modal");
+
 
 
 
@@ -35,18 +39,28 @@ $location.addEventListener("click", () => {
   this.location.href = "locations.html";
 });
 
-$more.addEventListener("click", () => {
-  this.location.href = "locations.html";
-});
+// $more.addEventListener("click", () => {
+//   this.location.href = "locations.html";
+// });
 
  
 
-$explore.addEventListener("click", () => {
- this.location.href = "locations.html";
-});
+// $explore.addEventListener("click", () => {
+//  this.location.href = "locations.html";
+// });
 
-$tour.addEventListener("click", () => {
-  this.location.href = "locations.html";
-});
+// $tour.addEventListener("click", () => {
+//   this.location.href = "locations.html";
+// });
+
+$cardBtn.forEach((card)=>{
+  card.addEventListener("click", function(){
+    $describtionModal.classList.add("show")
+  })
+})  
+
+$closeicon.addEventListener("click", ()=>{
+  $describtionModal.classList.remove("show");
+})
 
 
