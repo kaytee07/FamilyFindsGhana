@@ -156,7 +156,6 @@
   .cards-for-desktop {
     max-width: 270px;
     height: auto;
-    margin-right: 40px !important;
   }
 }
 
@@ -553,11 +552,14 @@
           flex-direction: column;
   overflow: hidden;
   width: 100%;
-  margin-right: 0.75rem;
   -webkit-transition: -webkit-transform 1s all;
   transition: -webkit-transform 1s all;
   transition: transform 1s all;
   transition: transform 1s all, -webkit-transform 1s all;
+}
+
+.hero__find-events__cards .cards .card:last-child {
+  margin-right: 0 !important;
 }
 
 .hero__find-events__cards .cards .card:hover {
