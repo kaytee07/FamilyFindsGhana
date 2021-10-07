@@ -10,13 +10,13 @@
         font-family: $lato;
 
         .icon.hide-for-desktop{
-            position: absolute;
+            position: relative;
             left: 10%;
-            top: 9%;       
+            top: 28%;       
         }
 
         .icon.hide-for-mobile{
-            position: absolute;
+            position: relative;
             left: 3%;
             top: 21%;  
         }

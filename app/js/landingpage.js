@@ -14,6 +14,7 @@ const Land =(_ =>{
     const $closeicon = document.querySelector(".close-icon");
     const $overlay = document.querySelector(".overlay2");
     const $cards = document.querySelector(".cards");
+    const $describtionModal = document.querySelector(".describtion__modal");
      
     
  
@@ -22,9 +23,8 @@ const Land =(_ =>{
         
         render()
          listeners();
-         
-         
-      
+         console.log($closeicon)
+           
     }
 
     const listeners = ()=>{
@@ -74,20 +74,61 @@ const Land =(_ =>{
 
          
           
-
+   
      document.querySelectorAll(".card-btn").forEach((card) => {
+        
           card.addEventListener("click", function () {
             $describtionModal.classList.add("show");
             $body.classList.add("hidden");
             $overlay.classList.add("show");
+            
+            
+            
+            
+            let markup = "";
+
+            markup += `
+                   <div class="describtion__modal__card">
+            <div class="describtion__modal__card__header">
+                <div class="describtion__modal__card__header-img">
+                       <img src="${
+                         card.parentElement.previousElementSibling
+                           .firstElementChild.src
+                       }" alt="">   
+                </div>
+                <div class="describtion__modal__card__headers-other-details">
+                    <div class="close-icon">
+                        <i class="fad fa-times-hexagon"></i>
+                    </div>
+                    <div class="describtion__modal__card__headers-other-details">
+                       <h4 >${
+                         card.parentElement.firstElementChild.innerHTML
+                       }</h4>
+                        <p>
+                          ${Product.map(
+                            (about) =>
+                              card.parentElement.firstElementChild.innerHTML == about.name ? about.about: ''
+                          )}
+                        </p>
+                        <button class="button">Get Location</button>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        
+            `
+            // ;
+            //                  $closeicon.addEventListener("click", () => {
+            //                    $describtionModal.classList.remove("show");
+            //                    $body.classList.remove("hidden");
+            //                    $overlay.classList.remove("show");
+            //                  });
+            $describtionModal.innerHTML = markup;
           });
         });
 
-        $closeicon.addEventListener("click", () => {
-          $describtionModal.classList.remove("show");
-          $body.classList.remove("hidden");
-          $overlay.classList.remove("show");
-        });
+       
 
 
     }

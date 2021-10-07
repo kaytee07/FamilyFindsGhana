@@ -1,0 +1,37 @@
+::-webkit-scrollbar{
+    width: 0.5em;
+    height: 0.5em;
+
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgba(220, 220, 220, 0.452);
+    border-radius: 100vw;
+    
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+    border-radius: 100vw;
+   
+}
+
+.product__page__product::-webkit-scrollbar-thumb{
+
+    background:rgba(220, 220, 220, 0.452) ;
+    border-radius: 100vw;
+    border: 0.1em solid rgba(220, 220, 220, 0.452);
+}
+
+.product__page__product::-webkit-scrollbar-track{
+   background-color: rgba(220, 220, 220, 0.123);
+    border-radius: 100vw;
+}
+
+@supports(scrollbar-color: red blue){
+
+    *{
+        scrollbar-color:rgba(220, 220, 220, 0.123) rgba(220, 220, 220, 0.452);
+        scrollbar-width: thin;
+    }
+}
