@@ -23,7 +23,7 @@ const Land =(_ =>{
         
         render()
          listeners();
-         console.log($closeicon)
+         
            
     }
 
@@ -81,18 +81,34 @@ const Land =(_ =>{
             $describtionModal.classList.add("show");
             $body.classList.add("hidden");
             $overlay.classList.add("show");
-            
-            
-            
-            
-            let markup = "";
+            showModal(card)
+                
+          });
 
-            markup += `
+      $describtionModal.addEventListener("click", (e)=>{
+        if(e.target.classList.value === "fad fa-times-hexagon"){
+           $describtionModal.classList.remove("show");
+            $body.classList.remove("hidden");
+            $overlay.classList.remove("show");
+        }
+
+        //  if (e.target.classList.value === "button") {
+          
+        //  }
+      })
+      
+        });
+
+    const showModal = (elem) => {
+
+       let markup = "";
+
+       markup += `
                    <div class="describtion__modal__card">
             <div class="describtion__modal__card__header">
                 <div class="describtion__modal__card__header-img">
                        <img src="${
-                         card.parentElement.previousElementSibling
+                         elem.parentElement.previousElementSibling
                            .firstElementChild.src
                        }" alt="">   
                 </div>
@@ -102,12 +118,14 @@ const Land =(_ =>{
                     </div>
                     <div class="describtion__modal__card__headers-other-details">
                        <h4 >${
-                         card.parentElement.firstElementChild.innerHTML
+                         elem.parentElement.firstElementChild.innerHTML
                        }</h4>
                         <p>
-                          ${Product.map(
-                            (about) =>
-                              card.parentElement.firstElementChild.innerHTML == about.name ? about.about: ''
+                          ${Product.map((about) =>
+                            elem.parentElement.firstElementChild.innerHTML ==
+                            about.name
+                              ? about.about
+                              : ""
                           )}
                         </p>
                         <button class="button">Get Location</button>
@@ -117,18 +135,17 @@ const Land =(_ =>{
         </div>
 
         
-            `
-            // ;
-            //                  $closeicon.addEventListener("click", () => {
-            //                    $describtionModal.classList.remove("show");
-            //                    $body.classList.remove("hidden");
-            //                    $overlay.classList.remove("show");
-            //                  });
-            $describtionModal.innerHTML = markup;
-          });
-        });
+            `;
+       // ;
+       //                  $closeicon.addEventListener("click", () => {
+       //                    $describtionModal.classList.remove("show");
+       //                    $body.classList.remove("hidden");
+       //                    $overlay.classList.remove("show");
+       //                  });
+       $describtionModal.innerHTML = markup;
+       console.log($closeicon);
 
-       
+    }
 
 
     }
