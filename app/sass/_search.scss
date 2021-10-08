@@ -5,20 +5,20 @@
     &__box{
         padding: 15px 1.835rem 0 1.835rem;
         width: 100%;
-        display: flex;
-        justify-content: center;
+        // display: flex;
+        // justify-content: center;
         font-family: $lato;
 
         .icon.hide-for-desktop{
             position: relative;
-            left: 10%;
-            top: 28%;       
+            left: 3%;
+            top: 48%;       
         }
 
         .icon.hide-for-mobile{
             position: relative;
-            left: 3%;
-            top: 21%;  
+            left: 1%;
+            top: 49%;  
         }
 
 

@@ -136,12 +136,7 @@ const Land =(_ =>{
 
         
             `;
-       // ;
-       //                  $closeicon.addEventListener("click", () => {
-       //                    $describtionModal.classList.remove("show");
-       //                    $body.classList.remove("hidden");
-       //                    $overlay.classList.remove("show");
-       //                  });
+      
        $describtionModal.innerHTML = markup;
        console.log($closeicon);
 
