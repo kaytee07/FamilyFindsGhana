@@ -364,7 +364,7 @@
 }
 
 .hero__home-img {
-  background: url(img/hero-img3.jpg);
+  background: url(http://127.0.0.1:5502/img/hero-img3.jpg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -407,7 +407,7 @@
 }
 
 .hero__home-img.hide-for-mobile {
-  background: url(img/desktop-land-img.jpg);
+  background: url(http://127.0.0.1:5502/img/hero-img3.jpg);
   position: relative;
   width: 100%;
   height: 470px;
