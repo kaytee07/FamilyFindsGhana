@@ -1,21 +1,41 @@
 import { Product } from "./product.js";
 
 const LocationLanding = (()=>{
-   const $category = document.querySelectorAll(".category"); ;
+   const $category = document.querySelectorAll(".category"); 
+    const $headerOptions = document.querySelector(".header__options");
    const $productPageCategory =  document.querySelectorAll(".product__page__product");
    const $describtionModal = document.querySelector(".describtion__modal");
    const $body = document.querySelector("body");
-    const $overlay = document.querySelector(".overlay2");
+   const $overlay = document.querySelector(".overlay2");
+   const $logo = document.querySelector(".header__nav__logo");
+   const $location = document.querySelectorAll(".location");
+   const $hamburger = document.querySelector(".header__hamburger");
+   const $cover = document.querySelector(".cover");
+   
+      
+  
   
 
     const init = () =>{
        render()
        listeners ()
-      
+    
     }
 
     const listeners = () =>{
-     const $card = $productPageCategory
+     const $card = $productPageCategory;
+
+      document.querySelector(".hfm").addEventListener("click", (e) => {
+        if (e.target) {
+          $hamburger.classList.remove("close");
+          $cover.classList.remove("overlay");
+          $headerOptions.classList.remove("open-menu");
+          $body.classList.remove("hidden");
+        }
+      });
+
+     
+
      $card.forEach((elem)=>{
         elem.childNodes[1].addEventListener("click",(e)=>{
             if(e.target.classList.value === "card-btn btn"){
@@ -24,10 +44,13 @@ const LocationLanding = (()=>{
                  $overlay.classList.add("show");
                  showModal(e.target)
             }
-        })
-
-        
+        })   
      })
+
+     
+      $logo.addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
 
         $describtionModal.addEventListener("click", (e) => {
           if (e.target.classList.value === "fad fa-times-hexagon") {
@@ -39,11 +62,30 @@ const LocationLanding = (()=>{
 
         });
 
+         
+
+         $hamburger.addEventListener("click", () => {
+           if ($hamburger.classList.contains("close")) {
+             $hamburger.classList.remove("close");
+             $cover.classList.remove("overlay");
+             $headerOptions.classList.remove("open-menu");
+             $body.classList.remove("hidden");
+           } else {
+             $hamburger.classList.add("close");
+             $cover.classList.add("overlay");
+             $headerOptions.classList.add("open-menu");
+             $body.classList.add("hidden");
+             //   $headerOptions.classList.add("fade-in");
+           }
+         });
+
      
     }
 
      const showModal = (elem) => {
        let markup = "";
+       let loc = ''
+      
 
        markup += `
                    <div class="describtion__modal__card">
@@ -70,7 +112,12 @@ const LocationLanding = (()=>{
                               : ""
                           )}
                         </p>
-                        <button class="button">Get Location</button>
+                        <button name="${Product.map((locations) =>
+                          elem.parentElement.firstElementChild.innerHTML ==
+                          locations.name
+                            ? (loc = locations.location)
+                            : ""
+                        )}" class="button"><a href="${loc}" target="_blank">Get Location</a></button>
                     </div>
                 </div>
             </div>  

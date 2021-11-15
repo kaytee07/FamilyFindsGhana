@@ -511,6 +511,7 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   color: #FF6201;
+  cursor: pointer;
 }
 
 .hero__find-events h2 {

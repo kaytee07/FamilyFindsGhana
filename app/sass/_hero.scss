@@ -136,12 +136,14 @@
 
      &__find-events{
          background-color: #ecf9ff;
+         cursor: pointer;
 
          .more{
              padding: 0 5.5rem;
              display: flex;
              justify-content: flex-end;
              color: $orange;
+             cursor:pointer;
          }
          
         h2{

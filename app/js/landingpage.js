@@ -15,11 +15,12 @@ const Land =(_ =>{
     const $overlay = document.querySelector(".overlay2");
     const $cards = document.querySelector(".cards");
     const $describtionModal = document.querySelector(".describtion__modal");
-     
+    const $hfm = document.querySelectorAll(".hfm")
     
  
 
     const init = _ =>{
+     
         
         render()
          listeners();
@@ -28,6 +29,11 @@ const Land =(_ =>{
     }
 
     const listeners = ()=>{
+     
+
+       document.querySelector('.last').addEventListener('click',()=>{
+          window.location.href = "locations.html";
+       })
            
         $hamburger.addEventListener("click", () => {
           if ($hamburger.classList.contains("close")) {
@@ -92,10 +98,13 @@ const Land =(_ =>{
             $overlay.classList.remove("show");
         }
 
+
         //  if (e.target.classList.value === "button") {
           
         //  }
       })
+
+  
       
         });
 
@@ -128,7 +137,14 @@ const Land =(_ =>{
                               : ""
                           )}
                         </p>
-                        <button class="button">Get Location</button>
+                          <button class="button"><a href="${Product.map(
+                            (element) => {
+                              elem.parentElement.firstElementChild.innerHTML ==
+                              element.name
+                                ? element.location
+                                : "";
+                            }
+                          )}">Get Location</a></button>
                     </div>
                 </div>
             </div>  
